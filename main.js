@@ -71,8 +71,10 @@ myAtem.on('stateChanged', (state, path) => {
     if(!state || !state.video || !state.video.mixEffects || !state.video.mixEffects[0]) return;
 
     const preview = state.video.mixEffects[0].previewInput;
-	const program = state.video.mixEffects[0].programInput;
+    const program = state.video.mixEffects[0].programInput;
 
+    console.log('Setting Online Camera to', programInput)
     setOnlineCam(programInput);
+    console.log('Setting Preview Camera to', previewInput)
     setPreviewCam(previewInput)
 })
