@@ -1,0 +1,16 @@
+{
+  "name": "tally",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Ethan Harvey",
+  "license": "MIT",
+  "dependencies": {
+    "atem-connection": "^2.3.0",
+    "serialport": "^9.2.4"
+  },
+  "type": "module"
+}
