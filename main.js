@@ -11,7 +11,7 @@ function atemErr(msg){ console.error('Atem Error:', msg); }
 myAtem.on('info', atemLog)
 myAtem.on('error', atemErr)
 
-myAtem.connect('192.168.168.240')
+// myAtem.connect('192.168.168.240')
 
 myAtem.on('connected', () => {
     console.log('Atem Connected')
@@ -57,11 +57,8 @@ function writeNum(num)
     port.write(num.toString() + '\r');
 }
 
-function setOnlineCam(num){ if (num >= 0 && num <= 6) { writeNum(num); } else { throw new Error(num + ' not in valid camera range.'); } }
-function setPreviewCam(num){  if (num >= 0 && num <= 6) { writeNum(num + 7); } else { throw new Error(num + ' not in valid camera range.'); } }
-
-setTimeout(function(){ setOnlineCam(0); }, 100)
-setTimeout(function(){ setPreviewCam(0); }, 100)
+function setOnlineCam(num){ if (num >= 0 && num <= 8) { writeNum(num); } else { throw new Error(num + ' not in valid camera range.'); } }
+function setPreviewCam(num){  if (num >= 0 && num <= 8) { writeNum(num + 10); } else { throw new Error(num + ' not in valid camera range.'); } }
 
 
 myAtem.on('stateChanged', (state, path) => {
